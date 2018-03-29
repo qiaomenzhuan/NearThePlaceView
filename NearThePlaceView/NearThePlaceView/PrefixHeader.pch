@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  NearThePlaceView
+//
+//  Created by 杨磊 on 2018/3/29.
+//  Copyright © 2018年 csda_Chinadance. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#ifdef __OBJC__
+
+#import <AMapFoundationKit/AMapFoundationKit.h>
+#import <MAMapKit/MAMapKit.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <Masonry.h>
+#endif
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(1.f)]
+#define COLOR_BASE_GREEN        RGBCOLOR(0xfa, 0x58,0x58)        //默认绿色fa5858
+#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
+
+#endif /* PrefixHeader_pch */
